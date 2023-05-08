@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DB8FDCE2A088D3B00D82C7F /* watchcordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB8FDCD2A088D3B00D82C7F /* watchcordApp.swift */; };
+		4DB8FDD02A088D3B00D82C7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB8FDCF2A088D3B00D82C7F /* ContentView.swift */; };
+		4DB8FDD22A088D3C00D82C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8FDD12A088D3C00D82C7F /* Assets.xcassets */; };
+		4DB8FDD52A088D3C00D82C7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8FDD42A088D3C00D82C7F /* Preview Assets.xcassets */; };
+		4DB8FDDB2A088D3C00D82C7F /* watchcord Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4DB8FDDA2A088D3C00D82C7F /* watchcord Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4DB8FDE02A088D3C00D82C7F /* watchcordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB8FDDF2A088D3C00D82C7F /* watchcordApp.swift */; };
+		4DB8FDE22A088D3C00D82C7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB8FDE12A088D3C00D82C7F /* ContentView.swift */; };
+		4DB8FDE42A088D3D00D82C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8FDE32A088D3D00D82C7F /* Assets.xcassets */; };
+		4DB8FDE72A088D3D00D82C7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8FDE62A088D3D00D82C7F /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DB8FDDC2A088D3C00D82C7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB8FDC22A088D3B00D82C7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DB8FDD92A088D3C00D82C7F;
+			remoteInfo = "watchcord Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4DB8FDED2A088D3D00D82C7F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4DB8FDDB2A088D3C00D82C7F /* watchcord Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4DB8FDCA2A088D3B00D82C7F /* watchcord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchcord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB8FDCD2A088D3B00D82C7F /* watchcordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchcordApp.swift; sourceTree = "<group>"; };
+		4DB8FDCF2A088D3B00D82C7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4DB8FDD12A088D3C00D82C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DB8FDD42A088D3C00D82C7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DB8FDDA2A088D3C00D82C7F /* watchcord Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watchcord Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB8FDDF2A088D3C00D82C7F /* watchcordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchcordApp.swift; sourceTree = "<group>"; };
+		4DB8FDE12A088D3C00D82C7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4DB8FDE32A088D3D00D82C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DB8FDE62A088D3D00D82C7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DB8FDC72A088D3B00D82C7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB8FDD72A088D3C00D82C7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DB8FDC12A088D3B00D82C7F = {
+			isa = PBXGroup;
+			children = (
+				4DB8FDCC2A088D3B00D82C7F /* watchcord */,
+				4DB8FDDE2A088D3C00D82C7F /* watchcord Watch App */,
+				4DB8FDCB2A088D3B00D82C7F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DB8FDCB2A088D3B00D82C7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB8FDCA2A088D3B00D82C7F /* watchcord.app */,
+				4DB8FDDA2A088D3C00D82C7F /* watchcord Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB8FDCC2A088D3B00D82C7F /* watchcord */ = {
+			isa = PBXGroup;
+			children = (
+				4DB8FDCD2A088D3B00D82C7F /* watchcordApp.swift */,
+				4DB8FDCF2A088D3B00D82C7F /* ContentView.swift */,
+				4DB8FDD12A088D3C00D82C7F /* Assets.xcassets */,
+				4DB8FDD32A088D3C00D82C7F /* Preview Content */,
+			);
+			path = watchcord;
+			sourceTree = "<group>";
+		};
+		4DB8FDD32A088D3C00D82C7F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4DB8FDD42A088D3C00D82C7F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DB8FDDE2A088D3C00D82C7F /* watchcord Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				4DB8FDDF2A088D3C00D82C7F /* watchcordApp.swift */,
+				4DB8FDE12A088D3C00D82C7F /* ContentView.swift */,
+				4DB8FDE32A088D3D00D82C7F /* Assets.xcassets */,
+				4DB8FDE52A088D3D00D82C7F /* Preview Content */,
+			);
+			path = "watchcord Watch App";
+			sourceTree = "<group>";
+		};
+		4DB8FDE52A088D3D00D82C7F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4DB8FDE62A088D3D00D82C7F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DB8FDC92A088D3B00D82C7F /* watchcord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB8FDEE2A088D3D00D82C7F /* Build configuration list for PBXNativeTarget "watchcord" */;
+			buildPhases = (
+				4DB8FDC62A088D3B00D82C7F /* Sources */,
+				4DB8FDC72A088D3B00D82C7F /* Frameworks */,
+				4DB8FDC82A088D3B00D82C7F /* Resources */,
+				4DB8FDED2A088D3D00D82C7F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DB8FDDD2A088D3C00D82C7F /* PBXTargetDependency */,
+			);
+			name = watchcord;
+			productName = watchcord;
+			productReference = 4DB8FDCA2A088D3B00D82C7F /* watchcord.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DB8FDD92A088D3C00D82C7F /* watchcord Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB8FDEA2A088D3D00D82C7F /* Build configuration list for PBXNativeTarget "watchcord Watch App" */;
+			buildPhases = (
+				4DB8FDD62A088D3C00D82C7F /* Sources */,
+				4DB8FDD72A088D3C00D82C7F /* Frameworks */,
+				4DB8FDD82A088D3C00D82C7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watchcord Watch App";
+			productName = "watchcord Watch App";
+			productReference = 4DB8FDDA2A088D3C00D82C7F /* watchcord Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DB8FDC22A088D3B00D82C7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4DB8FDC92A088D3B00D82C7F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					4DB8FDD92A088D3C00D82C7F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 4DB8FDC52A088D3B00D82C7F /* Build configuration list for PBXProject "watchcord" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DB8FDC12A088D3B00D82C7F;
+			productRefGroup = 4DB8FDCB2A088D3B00D82C7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DB8FDC92A088D3B00D82C7F /* watchcord */,
+				4DB8FDD92A088D3C00D82C7F /* watchcord Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DB8FDC82A088D3B00D82C7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB8FDD52A088D3C00D82C7F /* Preview Assets.xcassets in Resources */,
+				4DB8FDD22A088D3C00D82C7F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB8FDD82A088D3C00D82C7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB8FDE72A088D3D00D82C7F /* Preview Assets.xcassets in Resources */,
+				4DB8FDE42A088D3D00D82C7F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DB8FDC62A088D3B00D82C7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB8FDD02A088D3B00D82C7F /* ContentView.swift in Sources */,
+				4DB8FDCE2A088D3B00D82C7F /* watchcordApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB8FDD62A088D3C00D82C7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB8FDE22A088D3C00D82C7F /* ContentView.swift in Sources */,
+				4DB8FDE02A088D3C00D82C7F /* watchcordApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DB8FDDD2A088D3C00D82C7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DB8FDD92A088D3C00D82C7F /* watchcord Watch App */;
+			targetProxy = 4DB8FDDC2A088D3C00D82C7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4DB8FDE82A088D3D00D82C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4DB8FDE92A088D3D00D82C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4DB8FDEB2A088D3D00D82C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watchcord Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = QX9LC82293;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = watchcord;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = circularsprojects.watchcord;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		4DB8FDEC2A088D3D00D82C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watchcord Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = QX9LC82293;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = watchcord;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = circularsprojects.watchcord;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		4DB8FDEF2A088D3D00D82C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watchcord/Preview Content\"";
+				DEVELOPMENT_TEAM = QX9LC82293;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = watchcord;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4DB8FDF02A088D3D00D82C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"watchcord/Preview Content\"";
+				DEVELOPMENT_TEAM = QX9LC82293;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = watchcord;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DB8FDC52A088D3B00D82C7F /* Build configuration list for PBXProject "watchcord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB8FDE82A088D3D00D82C7F /* Debug */,
+				4DB8FDE92A088D3D00D82C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DB8FDEA2A088D3D00D82C7F /* Build configuration list for PBXNativeTarget "watchcord Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB8FDEB2A088D3D00D82C7F /* Debug */,
+				4DB8FDEC2A088D3D00D82C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DB8FDEE2A088D3D00D82C7F /* Build configuration list for PBXNativeTarget "watchcord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB8FDEF2A088D3D00D82C7F /* Debug */,
+				4DB8FDF02A088D3D00D82C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DB8FDC22A088D3B00D82C7F /* Project object */;
+}
