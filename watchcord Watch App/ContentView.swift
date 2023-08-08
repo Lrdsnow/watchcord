@@ -2,20 +2,42 @@
 //  ContentView.swift
 //  watchcord Watch App
 //
-//  Created by Levi Rigger on 8/5/2023.
+//  Created by circular on 8/5/2023.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @State private var guilds: [Guild] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                // for each in guildfetcher get guilds
+                ForEach (guilds) {
+                    guild in
+                    NavigationLink {
+                        GuildDetails(guild: guild)
+                    } label: {
+                        GuildItem(guild: guild)
+                    }
+                    .padding(.vertical, 10)
+                }
+            }
+            .navigationTitle("Servers")
+            .onAppear {
+                if (kread(service: "watchcord", account: "token") == nil || kread(service: "watchcord", account: "token") == Data()) {
+                    print("no token")
+                    return
+                } else {
+                    Gateway.establishConnection()
+                    guildFetcher.getGuilds() {
+                        guilds in
+                        self.guilds = guilds
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 

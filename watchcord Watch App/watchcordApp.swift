@@ -2,7 +2,7 @@
 //  watchcordApp.swift
 //  watchcord Watch App
 //
-//  Created by Levi Rigger on 8/5/2023.
+//  Created by circular on 8/5/2023.
 //
 
 import SwiftUI
@@ -11,7 +11,10 @@ import SwiftUI
 struct watchcord_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView().onAppear {
+//                Gateway.establishConnection()
+//            }
+            InitView()
         }
     }
 }
