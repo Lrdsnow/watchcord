@@ -11,5 +11,6 @@ struct Message: Identifiable {
     var type: Int
     var content: String
     var channel_id: String
+    var timestamp: Date
     var author: User
 }

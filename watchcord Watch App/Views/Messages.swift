@@ -12,44 +12,11 @@ struct Messages: View {
     var channel: Channel
     @State private var messages: [Message] = []
     @State private var cancellable: AnyCancellable?
+    @State private var timer: Timer?
     
     var body: some View {
         VStack {
             List {
-//                HStack {
-//                    AsyncImage(url: URL(string:"https://cdn.discordapp.com/avatars/305243321784336384/fc0914ced252a9754e6ffd3c64823b9b.png")) { phase in
-//                        switch phase {
-//                        case .empty:
-//                            ProgressView()
-//                        case .success(let image):
-//                            image.resizable()
-//                                .aspectRatio(contentMode: .fit)
-//                                .frame(maxWidth: 20, maxHeight: 20)
-//                        case .failure:
-//                            Image(systemName: "photo")
-//                        @unknown default:
-//                            EmptyView()
-//                        }
-//                    }
-//                    .cornerRadius(4)
-//                    Text("circular:\nITS DRIVING ME INSANE")
-//                        .font(.system(size:12))
-//                }
-//                .listRowBackground(Color.clear)
-//                .scaleEffect(x: 1, y: -1, anchor: .center)
-//                MessageItem(message: Message(
-//                    id: "1136144263479054526",
-//                    type: 0,
-//                    content: "hi guys",
-//                    channel_id: "775347652224352258",
-//                    author: User(
-//                        id: "305243321784336384",
-//                        username: "circular",
-//                        global_name: "the circlest of them all",
-//                        avatar: "fc0914ced252a9754e6ffd3c64823b9b",
-//                        discriminator: "0000"
-//                    )
-//                ))
                 ForEach(messages) { message in
                     MessageItem(message: message)
                 }
@@ -70,7 +37,13 @@ struct Messages: View {
                     //                    let message = MessageConverter.toMessage(message: jsonmessage as! [String : Any])
                     //                    self.messages.insert(message ?? DefaultMessage.Error, at: 0)
                     let selfmessage = messageSender.sendMessage(message: value, channel: channel)
-                    //self.messages.insert(selfmessage, at: 0)
+//                    for message in messages {
+//                        if (message.id) == (selfmessage.id) {
+//                            return
+//                        }
+//                    }
+                    // self.messages.insert(selfmessage, at: 0)
+                    // experimental ^^
                 }
                 .buttonStyle(.plain)
                 .padding(.all, 6)
@@ -83,30 +56,42 @@ struct Messages: View {
                 messages in
                 self.messages = messages
             }
-            self.cancellable = Gateway.messageCreateSubject.sink { message in
-                //print("[MSGCAN] rec")
-                guard let message = message["d"] as? [String: Any] else {
-                    return
+            
+            //
+            // subscribes to gateway message create event
+            //
+//            self.cancellable = Gateway.messageCreateSubject.sink { message in
+//                //print("[MSGCAN] rec")
+//                guard let message = message["d"] as? [String: Any] else {
+//                    return
+//                }
+//                let nmessage = MessageConverter.toMessage(message: message)
+//                //print("[MSGCAN] RECV: \(nmessage.channel_id)")
+//                //print("[MSGCAN] SELF: \(self.channel.id)")
+//                if (nmessage?.channel_id == self.channel.id) {
+//                    //self.messages.append(nmessage)
+//                    print("[MSGCAN] added new")
+//                    // append message to the beginning of messages
+//                    for message in messages {
+//                        if (message.id) == (nmessage?.id) {
+//                            return
+//                        }
+//                    }
+//                    self.messages.insert(nmessage ?? DefaultMessage.Error, at: 0)
+//                }
+//                //self?.messages.append(message)
+//            }
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                messageFetcher.getMessages(channel: self.channel) {
+                    messages in
+                    self.messages = messages
                 }
-                let nmessage = MessageConverter.toMessage(message: message)
-                //print("[MSGCAN] RECV: \(nmessage.channel_id)")
-                //print("[MSGCAN] SELF: \(self.channel.id)")
-                if (nmessage?.channel_id == self.channel.id) {
-                    //self.messages.append(nmessage)
-                    print("[MSGCAN] added new")
-                    // append message to the beginning of messages
-                    for message in messages {
-                        if (message.id) == (nmessage?.id) {
-                            return
-                        }
-                    }
-                    self.messages.insert(nmessage ?? DefaultMessage.Error, at: 0)
-                }
-                //self?.messages.append(message)
+                print("fetched messages via timer")
             }
         }
         .onDisappear {
             self.cancellable?.cancel()
+            timer?.invalidate()
         }
     }
 }

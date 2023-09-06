@@ -17,6 +17,7 @@ class MessageConverter {
             type: message["type"] as! Int,
             content: message["content"] as! String,
             channel_id: message["channel_id"] as! String,
+            timestamp: DefaultMessage.dateFormatter.date(from: message["timestamp"] as! String) ?? Date(),
             author: User(
                 id: author["id"] as! String,
                 username: author["username"] as! String,

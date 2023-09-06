@@ -30,7 +30,7 @@ struct ContentView: View {
                     print("no token")
                     return
                 } else {
-                    Gateway.establishConnection()
+                    //Gateway.checkConnection()
                     guildFetcher.getGuilds() {
                         guilds in
                         self.guilds = guilds

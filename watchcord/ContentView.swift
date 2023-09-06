@@ -7,10 +7,12 @@
 
 import SwiftUI
 import WatchConnectivity
+import LocalConsole
 
 struct ContentView: View {
     @State private var token: String = ""
     let WCDelegate: WCDelegate
+    let consoleManager = LCManager.shared
     
     var body: some View {
         VStack {
@@ -31,6 +33,16 @@ struct ContentView: View {
             }
             .background(Color.red.opacity(0.5))
             .cornerRadius(5)
+            HStack {
+                Image(systemName: "ladybug.fill").padding(.leading, 6)
+                Button("Toggle Debug Console") {
+                    consoleManager.isVisible = !consoleManager.isVisible
+                }
+                .font(.caption)
+                .padding([.top, .bottom, .trailing], 6)
+            }
+            .background(Color.gray.opacity(0.5))
+            .cornerRadius(5)
             Text("use the field below to save your token so you can use the watch app")
                 .multilineTextAlignment(.center)
             SecureField("Token...", text: $token)
@@ -39,13 +51,19 @@ struct ContentView: View {
                 Button("Save") {
                     if token != "" {
                         ksave(token.data(using: .utf8)!, service: "watchcord", account: "token")
+                        consoleManager.print("Saved token to keychain")
                     }
                 }
                 .buttonStyle(.borderedProminent)
                 Button("Send to Watch") {
+                    consoleManager.print("Attempting to send token to watch..")
                     if (WCSession.default.isReachable) {
+                        consoleManager.print("WCSession is available! Sending..")
                         let message = ["Token": $token.wrappedValue]
                         WCSession.default.sendMessage(message, replyHandler: nil)
+                        
+                    } else {
+                        consoleManager.print("WCSession is not available, is the watch on the right page/is it on?")
                     }
                 }
                 .buttonStyle(.borderedProminent)
@@ -55,13 +73,18 @@ struct ContentView: View {
         .onAppear {
             //let WCDelegate = WCDelegate()
             let token = kread(service: "watchcord", account: "token")
+            consoleManager.print("Reading token from keychain..")
             if token != nil {
                 self.token = String(decoding: token!, as: UTF8.self)
+                consoleManager.print("Token is not nil, setting to textbox")
             }
             if (WCSession.isSupported()) {
                 let session = WCSession.default
                 session.delegate = WCDelegate
                 session.activate()
+                consoleManager.print("Attempting to activate WCSession..")
+            } else {
+                consoleManager.print("WCSession is not supported, and this app will not work. You need to run this app with an apple watch paired.")
             }
         }
     }
@@ -70,10 +93,10 @@ struct ContentView: View {
 class WCDelegate: NSObject, WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         if (activationState == .activated) {
-            print("activated")
+            LCManager.shared.print("WCSession activated.")
         }
         if (error != nil) {
-            print(error!.localizedDescription)
+            LCManager.shared.print(error!.localizedDescription)
         }
     }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D0A1E6B2A6F52FD00F7170D /* ChannelFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1E6A2A6F52FD00F7170D /* ChannelFetcher.swift */; };
 		4D0A1E732A70C20400F7170D /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A1E722A70C20400F7170D /* ChannelView.swift */; };
+		4D17EDF82A830C3E0058DF0F /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 4D17EDF72A830C3E0058DF0F /* LocalConsole */; settings = {ATTRIBUTES = (Required, ); }; };
 		4D1A493F2A7C99B900E4ED61 /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A493E2A7C99B900E4ED61 /* MessageSender.swift */; };
 		4D1A49452A7CA32F00E4ED61 /* Gateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A49442A7CA32F00E4ED61 /* Gateway.swift */; };
 		4D1A49512A80825C00E4ED61 /* MessageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A49502A80825C00E4ED61 /* MessageConverter.swift */; };
@@ -104,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D17EDF82A830C3E0058DF0F /* LocalConsole in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +273,7 @@
 			);
 			name = watchcord;
 			packageProductDependencies = (
+				4D17EDF72A830C3E0058DF0F /* LocalConsole */,
 			);
 			productName = watchcord;
 			productReference = 4DB8FDCA2A088D3B00D82C7F /* watchcord.app */;
@@ -323,6 +326,7 @@
 			);
 			mainGroup = 4DB8FDC12A088D3B00D82C7F;
 			packageReferences = (
+				4D17EDF62A830C3D0058DF0F /* XCRemoteSwiftPackageReference "LocalConsole" */,
 			);
 			productRefGroup = 4DB8FDCB2A088D3B00D82C7F /* Products */;
 			projectDirPath = "";
@@ -611,9 +615,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -644,9 +651,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -682,6 +692,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D17EDF62A830C3D0058DF0F /* XCRemoteSwiftPackageReference "LocalConsole" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/duraidabdul/LocalConsole/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D17EDF72A830C3E0058DF0F /* LocalConsole */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D17EDF62A830C3D0058DF0F /* XCRemoteSwiftPackageReference "LocalConsole" */;
+			productName = LocalConsole;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DB8FDC22A088D3B00D82C7F /* Project object */;
 }

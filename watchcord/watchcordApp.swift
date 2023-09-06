@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LocalConsole
 
 @main
 struct watchcordApp: App {

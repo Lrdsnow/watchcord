@@ -17,7 +17,12 @@ public class Gateway: ObservableObject {
         guard let url = URL(string: "wss://gateway.discord.gg/?v=10&encoding=json") else { return }
         var request = URLRequest(url: url)
         request.timeoutInterval = 60
-        webSocketTask = URLSession.shared.webSocketTask(with: request)
+        let config = URLSessionConfiguration.ephemeral
+        config.waitsForConnectivity = true
+        config.allowsCellularAccess = true
+        config.allowsExpensiveNetworkAccess = true
+        //webSocketTask = URLSession.shared.webSocketTask(with: request)
+        webSocketTask = URLSession(configuration: config).webSocketTask(with: request)
         webSocketTask?.resume()
         webSocketTask?.maximumMessageSize = 20000000
         receiveMessage()
@@ -26,6 +31,12 @@ public class Gateway: ObservableObject {
     static func closeConnection() {
         if (webSocketTask?.state == .running) {
             webSocketTask?.cancel(with: .goingAway, reason: nil)
+        }
+    }
+    
+    static func checkConnection() {
+        if (webSocketTask?.state != .running) {
+            establishConnection()
         }
     }
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WatchKit
 
 @main
 struct watchcord_Watch_AppApp: App {
@@ -16,5 +17,19 @@ struct watchcord_Watch_AppApp: App {
 //            }
             InitView()
         }
+    }
+}
+
+class InterfaceController: WKInterfaceController {
+    override func willActivate() {
+        super.willActivate()
+        
+        //Gateway.checkConnection()
+    }
+}
+
+class LifecycleController: NSObject, WKExtensionDelegate {
+    func applicationDidFinishLaunching() {
+        //Gateway.establishConnection()
     }
 }

@@ -23,7 +23,7 @@ public class messageFetcher {
             
             if let error = error {
                 print("Error took place \(error)")
-                messages.append(Message(id: "0", type: 0, content: "Error", channel_id: channel.id, author: User(id: "0", username: "Error", global_name: "Error", avatar: "", discriminator: "7777")))
+                messages.append(DefaultMessage.Error)
                 completion(messages)
                 return
             }
@@ -41,13 +41,13 @@ public class messageFetcher {
                 //returnVal = json
                 //print(json)
                 if (ratelimit == true) {
-                    messages.append(Message(id: "0", type: 0, content: "Error", channel_id: channel.id, author: User(id: "0", username: "Error", global_name: "Error", avatar: "", discriminator: "7777")))
+                    messages.append(DefaultMessage.RateLimitError)
                 } else {
                     // check if the json is a dictionary, then we will see if its an error
                     if let json = json as? Dictionary<String, Any> {
                         if let code = json["code"] as? Int {
                             if (code == 50001) {
-                                messages.append(Message(id: "0", type: 0, content: "You don't have permission to access this channel.", channel_id: channel.id, author: User(id: "0", username: "Error", global_name: "Error", avatar: "", discriminator: "7777")))
+                                messages.append(DefaultMessage.AccessError)
                                 completion(messages)
                                 return
                             }
@@ -62,6 +62,7 @@ public class messageFetcher {
                             type: message["type"] as! Int,
                             content: message["content"] as! String,
                             channel_id: message["channel_id"] as! String,
+                            timestamp: DefaultMessage.dateFormatter.date(from: message["timestamp"] as! String) ?? Date(),
                             author: User(
                                 id: author["id"] as! String,
                                 username: author["username"] as! String,
@@ -71,7 +72,6 @@ public class messageFetcher {
                             )
                         )
                         messages.append(nmessage)
-                    
                     }
                 }
             }
