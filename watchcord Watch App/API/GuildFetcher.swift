@@ -25,8 +25,10 @@ public class guildFetcher {
                 return
             }
             
+            var statusCode: Int = 0
             if let response = response as? HTTPURLResponse {
                 print("Response HTTP Status code: \(response.statusCode)")
+                statusCode = response.statusCode
                 if (response.statusCode == 429) {
                     ratelimit = true
                     //print(response.allHeaderFields)
@@ -40,9 +42,19 @@ public class guildFetcher {
                 if (ratelimit == true) {
                     guilds.append(Guild(id: "0", name: "Ratelimited", icon: "", owner: false, permissions: "0", features: []))
                 } else {
-                    for guild in json as! [Any] {
+                    guard let json = json as? [Any] else {
+                        guilds.append(Guild(id: "0", name: "Error code: \(statusCode)", icon: "", owner: false, permissions: "0", features: []))
+                        completion(guilds)
+                        return
+                    }
+                    for guild in json as [Any] {
                         guard let guild = guild as? [String: Any] else { continue }
                         //print("conv to guild.. \(guild["name"] as! String)")
+                        guard let _ = guild["id"] as? String else { continue }
+                        guard let _ = guild["name"] as? String else { continue }
+                        guard let _ = guild["owner"] as? Bool else { continue }
+                        guard let _ = guild["permissions"] as? String else { continue }
+                        guard let _ = guild["features"] as? [String] else { continue }
                         var nguild = Guild(
                             id: guild["id"] as! String,
                             name: guild["name"] as! String,

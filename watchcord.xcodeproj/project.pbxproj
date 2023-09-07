@@ -600,6 +600,7 @@
 				DEVELOPMENT_TEAM = QX9LC82293;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = watchcord/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = watchcord;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -636,6 +637,7 @@
 				DEVELOPMENT_TEAM = QX9LC82293;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = watchcord/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = watchcord;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
