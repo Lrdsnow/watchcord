@@ -24,6 +24,7 @@
 		4D41DCF72A79EE41002E5896 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41DCF62A79EE41002E5896 /* Message.swift */; };
 		4D41DCF92A79EEDF002E5896 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41DCF82A79EEDF002E5896 /* User.swift */; };
 		4D41DCFB2A7A0B92002E5896 /* MessageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41DCFA2A7A0B91002E5896 /* MessageFetcher.swift */; };
+		4D4730C22AA97099000ABD0D /* VerifyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4730C12AA97099000ABD0D /* VerifyToken.swift */; };
 		4D57AA4D2A3FFDF0002BC8C5 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D57AA4C2A3FFDF0002BC8C5 /* Channel.swift */; };
 		4DB62A882A295A0E00606DDA /* Guild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB62A872A295A0E00606DDA /* Guild.swift */; };
 		4DB62A8A2A29658900606DDA /* GuildItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB62A892A29658900606DDA /* GuildItem.swift */; };
@@ -83,6 +84,7 @@
 		4D41DCF62A79EE41002E5896 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		4D41DCF82A79EEDF002E5896 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4D41DCFA2A7A0B91002E5896 /* MessageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFetcher.swift; sourceTree = "<group>"; };
+		4D4730C12AA97099000ABD0D /* VerifyToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyToken.swift; sourceTree = "<group>"; };
 		4D57AA4C2A3FFDF0002BC8C5 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		4DB62A872A295A0E00606DDA /* Guild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guild.swift; sourceTree = "<group>"; };
 		4DB62A892A29658900606DDA /* GuildItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildItem.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				4DB8FDD12A088D3C00D82C7F /* Assets.xcassets */,
 				4DB8FDD32A088D3C00D82C7F /* Preview Content */,
 				4D1A49592A81BB9600E4ED61 /* Keychain.swift */,
+				4D4730C12AA97099000ABD0D /* VerifyToken.swift */,
 			);
 			path = watchcord;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			files = (
 				4DB8FDD02A088D3B00D82C7F /* ContentView.swift in Sources */,
 				4DB8FDCE2A088D3B00D82C7F /* watchcordApp.swift in Sources */,
+				4D4730C22AA97099000ABD0D /* VerifyToken.swift in Sources */,
 				4D1A495A2A81BB9600E4ED61 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

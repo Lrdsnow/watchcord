@@ -11,6 +11,7 @@ import LocalConsole
 
 struct ContentView: View {
     @State private var token: String = ""
+    @State private var verify: String = ""
     let WCDelegate: WCDelegate
     let consoleManager = LCManager.shared
     
@@ -67,6 +68,15 @@ struct ContentView: View {
                     }
                 }
                 .buttonStyle(.borderedProminent)
+            }
+            VStack {
+                Button("Verify Saved Token") {
+                    verifyToken.verify(completion: { result in
+                        verify = result
+                    })
+                }
+                .buttonStyle(.borderedProminent)
+                Text(verify)
             }
         }
         .padding()
