@@ -18,7 +18,12 @@ struct ContentView: View {
                     ForEach (guilds) {
                         guild in
                         NavigationLink {
-                            GuildDetails(guild: guild)
+                            //GuildDetails(guild: guild)
+                            TabView {
+                                GuildInfo(guild: guild)
+                                GuildView(guild: guild)
+                            }
+                            .tabViewStyle(PageTabViewStyle())
                         } label: {
                             GuildItem(guild: guild)
                         }
