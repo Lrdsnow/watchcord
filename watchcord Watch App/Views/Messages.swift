@@ -13,6 +13,7 @@ struct Messages: View {
     @State private var messages: [Message] = []
     @State private var cancellable: AnyCancellable?
     @State private var timer: Timer?
+    @State private var text: String = "" // for watchOS 8
     
     var body: some View {
         VStack {
@@ -23,31 +24,49 @@ struct Messages: View {
             }
             .scaleEffect(x: 1, y: -1, anchor: .center)
             HStack {
-                TextFieldLink(prompt: Text("message...")) {
-                    Label("Send", systemImage: "paperplane.fill")
-                        .font(.system(size: 12))
-                        .foregroundColor(.blue)
-                } onSubmit: { value in
-                    //                    let selfmessage = messageSender.sendMessage(message: value, channel: channel)
-                    //                    var jsonmessage = try? JSONSerialization.jsonObject(with: selfmessage, options: [])
-                    //                    if jsonmessage == nil {
-                    //                        print("🔴 Error parsing, is it possible the message didnt actually send?")
-                    //                        return
-                    //                    }
-                    //                    let message = MessageConverter.toMessage(message: jsonmessage as! [String : Any])
-                    //                    self.messages.insert(message ?? DefaultMessage.Error, at: 0)
-                    let selfmessage = messageSender.sendMessage(message: value, channel: channel)
-//                    for message in messages {
-//                        if (message.id) == (selfmessage.id) {
-//                            return
-//                        }
-//                    }
-                    // self.messages.insert(selfmessage, at: 0)
-                    // experimental ^^
+                if #available(watchOS 9.0, *) {
+                    TextFieldLink(prompt: Text("message...")) {
+                        Label("Send", systemImage: "paperplane.fill")
+                            .font(.system(size: 12))
+                            .foregroundColor(.blue)
+                    } onSubmit: { value in
+                        //                    let selfmessage = messageSender.sendMessage(message: value, channel: channel)
+                        //                    var jsonmessage = try? JSONSerialization.jsonObject(with: selfmessage, options: [])
+                        //                    if jsonmessage == nil {
+                        //                        print("🔴 Error parsing, is it possible the message didnt actually send?")
+                        //                        return
+                        //                    }
+                        //                    let message = MessageConverter.toMessage(message: jsonmessage as! [String : Any])
+                        //                    self.messages.insert(message ?? DefaultMessage.Error, at: 0)
+                        let selfmessage = messageSender.sendMessage(message: value, channel: channel)
+                        //                    for message in messages {
+                        //                        if (message.id) == (selfmessage.id) {
+                        //                            return
+                        //                        }
+                        //                    }
+                        // self.messages.insert(selfmessage, at: 0)
+                        // experimental ^^
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.all, 6)
+                    .cornerRadius(5)
+                } else {
+                    HStack {
+                        TextField("message...", text: $text)
+                            .textFieldStyle(.plain)
+                            .padding(.all, 6)
+                            .cornerRadius(5)
+                        
+                        Button(action: {
+                            let selfmessage = messageSender.sendMessage(message: text, channel: channel)
+                        }) {
+                            Label("Send", systemImage: "paperplane.fill")
+                                .font(.system(size: 12))
+                                .foregroundColor(.blue)
+                        }
+                        .buttonStyle(.plain)
+                    }
                 }
-                .buttonStyle(.plain)
-                .padding(.all, 6)
-                .cornerRadius(5)
             }
         }
         .ignoresSafeArea(edges: .all)

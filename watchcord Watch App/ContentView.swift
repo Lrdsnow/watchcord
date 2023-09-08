@@ -11,30 +11,51 @@ struct ContentView: View {
     @State private var guilds: [Guild] = []
     
     var body: some View {
-        NavigationStack {
-            List {
-                // for each in guildfetcher get guilds
-                ForEach (guilds) {
-                    guild in
-                    NavigationLink {
-                        GuildDetails(guild: guild)
-                    } label: {
-                        GuildItem(guild: guild)
+        if #available(watchOS 9.0, *) {
+            NavigationStack {
+                List {
+                    // for each in guildfetcher get guilds
+                    ForEach (guilds) {
+                        guild in
+                        NavigationLink {
+                            GuildDetails(guild: guild)
+                        } label: {
+                            GuildItem(guild: guild)
+                        }
+                        .padding(.vertical, 10)
                     }
-                    .padding(.vertical, 10)
                 }
+                .navigationTitle("Servers")
+                .onAppear {
+                    if (kread(service: "watchcord", account: "token") == nil || kread(service: "watchcord", account: "token") == Data()) {
+                        print("no token")
+                        return
+                    } else {
+                        //Gateway.checkConnection()
+                        guildFetcher.getGuilds() {
+                            guilds in
+                            self.guilds = guilds
+                        }
+                    }
+                }
+            }
+        } else {
+            List(guilds, id: \.id) { guild in
+                NavigationLink(destination: GuildDetails(guild: guild)) {
+                    GuildItem(guild: guild)
+                }
+                .padding(.vertical, 10)
             }
             .navigationTitle("Servers")
             .onAppear {
-                if (kread(service: "watchcord", account: "token") == nil || kread(service: "watchcord", account: "token") == Data()) {
-                    print("no token")
-                    return
-                } else {
-                    //Gateway.checkConnection()
-                    guildFetcher.getGuilds() {
-                        guilds in
+                if let tokenData = kread(service: "watchcord", account: "token"),
+                   tokenData != Data() {
+                    print("Token available")
+                    guildFetcher.getGuilds() { guilds in
                         self.guilds = guilds
                     }
+                } else {
+                    print("No token")
                 }
             }
         }

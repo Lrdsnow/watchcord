@@ -9,26 +9,41 @@ import SwiftUI
 struct InitView: View {
     var body: some View {
         let WCDelegate = WCDelegate()
-        NavigationStack {
+        if #available(watchOS 9.0, *) {
+            NavigationStack {
+                List {
+                    NavigationLink {
+                        ContentView()
+                    } label: {
+                        Text("Servers")
+                    }
+                    NavigationLink {
+                        Text("not implemented :P")
+                    } label: {
+                        Text("Friends").foregroundColor(.red)
+                    }
+                    NavigationLink {
+                        SettingsView(WCDelegate: WCDelegate)
+                    } label: {
+                        Text("Settings")
+                    }
+                }
+            }
+            .navigationTitle("watchcord")
+        } else {
             List {
-                NavigationLink {
-                    ContentView()
-                } label: {
+                NavigationLink(destination: ContentView()) {
                     Text("Servers")
                 }
-                NavigationLink {
-                    Text("not implemented :P")
-                } label: {
-                    Text("Friends").foregroundColor(.red)
+                NavigationLink(destination: Text("not implemented :P").foregroundColor(.red)) {
+                    Text("Friends")
                 }
-                NavigationLink {
-                    SettingsView(WCDelegate: WCDelegate)
-                } label: {
+                NavigationLink(destination: SettingsView(WCDelegate: WCDelegate)) {
                     Text("Settings")
                 }
             }
+            .navigationBarTitle("watchcord")
         }
-        .navigationTitle("watchcord")
     }
 }
 

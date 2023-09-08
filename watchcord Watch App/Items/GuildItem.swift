@@ -4,32 +4,51 @@
 //
 //  Created by circular on 2/6/2023.
 //
-
 import SwiftUI
 
 struct GuildItem: View {
     var guild: Guild
     
+    @ViewBuilder
+    func guildImage() -> some View {
+        if #available(watchOS 8.0, *) {
+            AsyncImage(url: URL(string: guild.icon)) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                        .frame(maxWidth: 40, maxHeight: 40)
+                case .success(let image):
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: 40, maxHeight: 40)
+                case .failure:
+                    Image(systemName: "photo")
+                        .frame(width: 40, height: 40)
+                @unknown default:
+                    EmptyView()
+                }
+            }
+            .cornerRadius(8)
+        } else {
+            if let url = URL(string: guild.icon),
+               let data = try? Data(contentsOf: url),
+               let uiImage = UIImage(data: data) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: 40, maxHeight: 40)
+                    .cornerRadius(8)
+            } else {
+                ProgressView()
+                    .frame(maxWidth: 40, maxHeight: 40)
+            }
+        }
+    }
+    
     var body: some View {
         VStack {
             HStack {
-                AsyncImage(url: URL(string:guild.icon)) { phase in
-                    switch phase {
-                    case .empty:
-                        ProgressView()
-                            .frame(maxWidth: 40, maxHeight: 40)
-                    case .success(let image):
-                        image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: 40, maxHeight: 40)
-                    case .failure:
-                        Image(systemName: "photo")
-                            .frame(width: 40, height: 40)
-                    @unknown default:
-                        EmptyView()
-                    }
-                }
-                .cornerRadius(8)
+                guildImage()
                 Text(guild.name)
             }
         }
