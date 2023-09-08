@@ -545,7 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"watchcord Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = QX9LC82293;
+				DEVELOPMENT_TEAM = 74ZNDNP8J2;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -559,7 +559,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/**";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = test.watchcord.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -578,7 +578,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"watchcord Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = QX9LC82293;
+				DEVELOPMENT_TEAM = 74ZNDNP8J2;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -592,7 +592,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/**";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = test.watchcord.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -613,7 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"watchcord/Preview Content\"";
-				DEVELOPMENT_TEAM = QX9LC82293;
+				DEVELOPMENT_TEAM = 74ZNDNP8J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = watchcord/Info.plist;
@@ -629,7 +629,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord;
+				PRODUCT_BUNDLE_IDENTIFIER = test.watchcord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -650,7 +650,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"watchcord/Preview Content\"";
-				DEVELOPMENT_TEAM = QX9LC82293;
+				DEVELOPMENT_TEAM = 74ZNDNP8J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = watchcord/Info.plist;
@@ -666,7 +666,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = circularsprojects.watchcord;
+				PRODUCT_BUNDLE_IDENTIFIER = test.watchcord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

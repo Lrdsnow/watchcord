@@ -46,10 +46,12 @@ struct ContentView: View {
             }
         } else {
             List(guilds, id: \.id) { guild in
-                NavigationLink(destination: GuildDetails(guild: guild)) {
-                    GuildItem(guild: guild)
+                //GuildDetails(guild: guild)
+                TabView {
+                    GuildInfo(guild: guild)
+                    GuildView(guild: guild)
                 }
-                .padding(.vertical, 10)
+                .tabViewStyle(PageTabViewStyle())
             }
             .navigationTitle("Servers")
             .onAppear {
