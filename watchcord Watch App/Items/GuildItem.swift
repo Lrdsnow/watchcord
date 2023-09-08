@@ -17,7 +17,7 @@ struct GuildItem: View {
                     switch phase {
                     case .empty:
                         ProgressView()
-                            .frame(maxWidth: 40, maxHeight: 40)
+                            .frame(width: 40, height: 40)
                     case .success(let image):
                         image.resizable()
                             .aspectRatio(contentMode: .fit)
