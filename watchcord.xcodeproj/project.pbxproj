@@ -18,6 +18,7 @@
 		4D1A495E2A81C4F800E4ED61 /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A495D2A81C4F800E4ED61 /* InitView.swift */; };
 		4D1A49602A81C81200E4ED61 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A495F2A81C81200E4ED61 /* SettingsView.swift */; };
 		4D1A49622A81D1E100E4ED61 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A49612A81D1E100E4ED61 /* Keychain.swift */; };
+		4D1E5E0F2AA9D36A000F35F0 /* GuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E5E0E2AA9D36A000F35F0 /* GuildInfo.swift */; };
 		4D25409F2A398DD7005BE306 /* ChannelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D25409E2A398DD7005BE306 /* ChannelItem.swift */; };
 		4D323DC12A6DF982000AC539 /* GuildFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D323DC02A6DF982000AC539 /* GuildFetcher.swift */; };
 		4D41DCF52A79EE28002E5896 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41DCF42A79EE28002E5896 /* MessageItem.swift */; };
@@ -28,7 +29,7 @@
 		4D57AA4D2A3FFDF0002BC8C5 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D57AA4C2A3FFDF0002BC8C5 /* Channel.swift */; };
 		4DB62A882A295A0E00606DDA /* Guild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB62A872A295A0E00606DDA /* Guild.swift */; };
 		4DB62A8A2A29658900606DDA /* GuildItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB62A892A29658900606DDA /* GuildItem.swift */; };
-		4DB62A8C2A29736E00606DDA /* GuildDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB62A8B2A29736D00606DDA /* GuildDetails.swift */; };
+		4DB62A8C2A29736E00606DDA /* GuildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB62A8B2A29736D00606DDA /* GuildView.swift */; };
 		4DB62A8E2A29990200606DDA /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB62A8D2A29990100606DDA /* Messages.swift */; };
 		4DB8FDCE2A088D3B00D82C7F /* watchcordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB8FDCD2A088D3B00D82C7F /* watchcordApp.swift */; };
 		4DB8FDD02A088D3B00D82C7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB8FDCF2A088D3B00D82C7F /* ContentView.swift */; };
@@ -39,8 +40,8 @@
 		4DB8FDE22A088D3C00D82C7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB8FDE12A088D3C00D82C7F /* ContentView.swift */; };
 		4DB8FDE42A088D3D00D82C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8FDE32A088D3D00D82C7F /* Assets.xcassets */; };
 		4DB8FDE72A088D3D00D82C7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB8FDE62A088D3D00D82C7F /* Preview Assets.xcassets */; };
-		6596B1042AAAB9E20005EED9 /* ExtGuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6596B1032AAAB9E20005EED9 /* ExtGuild.swift */; };
-		6596B1062AAABA250005EED9 /* ExtendGuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6596B1052AAABA250005EED9 /* ExtendGuild.swift */; };
+		4DDA8C462AAA9F030097CD96 /* ExtendGuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA8C452AAA9F030097CD96 /* ExtendGuild.swift */; };
+		4DDA8C482AAA9F130097CD96 /* ExtGuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA8C472AAA9F130097CD96 /* ExtGuild.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		4D1A495D2A81C4F800E4ED61 /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
 		4D1A495F2A81C81200E4ED61 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4D1A49612A81D1E100E4ED61 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		4D1E5E0E2AA9D36A000F35F0 /* GuildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildInfo.swift; sourceTree = "<group>"; };
 		4D25409E2A398DD7005BE306 /* ChannelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelItem.swift; sourceTree = "<group>"; };
 		4D323DBF2A6DEEE4000AC539 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4D323DC02A6DF982000AC539 /* GuildFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildFetcher.swift; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		4D57AA4C2A3FFDF0002BC8C5 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		4DB62A872A295A0E00606DDA /* Guild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guild.swift; sourceTree = "<group>"; };
 		4DB62A892A29658900606DDA /* GuildItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildItem.swift; sourceTree = "<group>"; };
-		4DB62A8B2A29736D00606DDA /* GuildDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildDetails.swift; sourceTree = "<group>"; };
+		4DB62A8B2A29736D00606DDA /* GuildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildView.swift; sourceTree = "<group>"; };
 		4DB62A8D2A29990100606DDA /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		4DB8FDCA2A088D3B00D82C7F /* watchcord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchcord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB8FDCD2A088D3B00D82C7F /* watchcordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchcordApp.swift; sourceTree = "<group>"; };
@@ -102,8 +104,8 @@
 		4DB8FDE12A088D3C00D82C7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DB8FDE32A088D3D00D82C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB8FDE62A088D3D00D82C7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6596B1032AAAB9E20005EED9 /* ExtGuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtGuild.swift; sourceTree = "<group>"; };
-		6596B1052AAABA250005EED9 /* ExtendGuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendGuild.swift; sourceTree = "<group>"; };
+		4DDA8C452AAA9F030097CD96 /* ExtendGuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendGuild.swift; sourceTree = "<group>"; };
+		4DDA8C472AAA9F130097CD96 /* ExtGuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtGuild.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +135,7 @@
 				4D41DCFA2A7A0B91002E5896 /* MessageFetcher.swift */,
 				4D1A493E2A7C99B900E4ED61 /* MessageSender.swift */,
 				4D1A49442A7CA32F00E4ED61 /* Gateway.swift */,
-				6596B1052AAABA250005EED9 /* ExtendGuild.swift */,
+				4DDA8C452AAA9F030097CD96 /* ExtendGuild.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -174,7 +176,8 @@
 		4D323DC32A6E0D12000AC539 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4DB62A8B2A29736D00606DDA /* GuildDetails.swift */,
+				4DB62A8B2A29736D00606DDA /* GuildView.swift */,
+				4D1E5E0E2AA9D36A000F35F0 /* GuildInfo.swift */,
 				4DB62A8D2A29990100606DDA /* Messages.swift */,
 				4D0A1E722A70C20400F7170D /* ChannelView.swift */,
 				4D1A495F2A81C81200E4ED61 /* SettingsView.swift */,
@@ -189,7 +192,7 @@
 				4D57AA4C2A3FFDF0002BC8C5 /* Channel.swift */,
 				4D41DCF62A79EE41002E5896 /* Message.swift */,
 				4D41DCF82A79EEDF002E5896 /* User.swift */,
-				6596B1032AAAB9E20005EED9 /* ExtGuild.swift */,
+				4DDA8C472AAA9F130097CD96 /* ExtGuild.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -384,9 +387,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6596B1042AAAB9E20005EED9 /* ExtGuild.swift in Sources */,
 				4D1A49602A81C81200E4ED61 /* SettingsView.swift in Sources */,
-				4DB62A8C2A29736E00606DDA /* GuildDetails.swift in Sources */,
+				4DB62A8C2A29736E00606DDA /* GuildView.swift in Sources */,
 				4D1A49512A80825C00E4ED61 /* MessageConverter.swift in Sources */,
 				4DB8FDE22A088D3C00D82C7F /* ContentView.swift in Sources */,
 				4D41DCF52A79EE28002E5896 /* MessageItem.swift in Sources */,
@@ -395,13 +397,15 @@
 				4D1A49452A7CA32F00E4ED61 /* Gateway.swift in Sources */,
 				4D0A1E732A70C20400F7170D /* ChannelView.swift in Sources */,
 				4D41DCFB2A7A0B92002E5896 /* MessageFetcher.swift in Sources */,
+				4DDA8C482AAA9F130097CD96 /* ExtGuild.swift in Sources */,
 				4DB62A8E2A29990200606DDA /* Messages.swift in Sources */,
+				4D1E5E0F2AA9D36A000F35F0 /* GuildInfo.swift in Sources */,
 				4D25409F2A398DD7005BE306 /* ChannelItem.swift in Sources */,
 				4D1A493F2A7C99B900E4ED61 /* MessageSender.swift in Sources */,
 				4DB62A8A2A29658900606DDA /* GuildItem.swift in Sources */,
 				4DB62A882A295A0E00606DDA /* Guild.swift in Sources */,
 				4D41DCF92A79EEDF002E5896 /* User.swift in Sources */,
-				6596B1062AAABA250005EED9 /* ExtendGuild.swift in Sources */,
+				4DDA8C462AAA9F030097CD96 /* ExtendGuild.swift in Sources */,
 				4D57AA4D2A3FFDF0002BC8C5 /* Channel.swift in Sources */,
 				4DB8FDE02A088D3C00D82C7F /* watchcordApp.swift in Sources */,
 				4D1A495E2A81C4F800E4ED61 /* InitView.swift in Sources */,
@@ -562,7 +566,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -596,7 +600,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
